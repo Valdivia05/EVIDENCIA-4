@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiderman</title>
+    <link rel="stylesheet" href="./css/tlou.css">
+</head>
+<body>
+    <!--menu-->
+    <header>
+        <nav class="menu">
+            <div class="logo">
+                <img src="imag/logo.jpeg" alt="">
+            </div>
+            <h2 class="name">GAMERSCAVES</h2>
+            <ul class="menu2" >
+                <li class="menu2"><a class="a" href="./index.html">INICIO</a></li>
+                <li class="menu2"><a class="a" href="./tienda.html">VENTA</a></li>
+                <li class="menu2"><a class="a" href="./foro.html">FORO</a></li>
+                <li class="menu2"><a class="a" href="./soporte.html">SOPORTE</a></li>
+                <li class="menu2"><a class="a" href="./registro.html">REGISTRARSE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--FIN DEL MENU-->
+    <!-- cuerpo -->
+    <div class="imagen">
+        <div class="juego">
+            <img src="imag/THE LAST.jpeg" alt="Imagenjuego" width="15%">
+        </div>
+        <div class="col1">
+            <h3>
+                The Last of Us es una obra maestra del género de acción y supervivencia, que te sumerge en un mundo postapocalíptico devastado por una infección fungosa. La narrativa sigue a Joel, un contrabandista endurecido, y Ellie, una joven inmune al virus, mientras viajan a través de un Estados Unidos desolado en busca de un grupo de rebeldes conocidos como los Luciérnagas.</h3>
+            <div class="precio">PRECIO: S/80</div>
+            <button class="add-to-cart-button">Añadir al carrito</button>
+            
+            <div class="rating-container">
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" title="5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="3 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 star"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.rating input');
+    
+        stars.forEach((star, index) => {
+            star.addEventListener('change', () => {
+                resetStars();
+                fillStars(index);
+            });
+            star.addEventListener('mouseover', () => fillStars(index));
+            star.addEventListener('mouseout', resetStars);
+        });
+    
+        function fillStars(index) {
+            for (let i = 0; i <= index; i++) {
+                stars[i].checked = true;
+            }
+        }
+    
+        function resetStars() {
+            stars.forEach(star => (star.checked = false));
+        }
+    </script>
+    
+    <!-- fin del cuerpo -->
+
+    <!--footer--> <br>
+    <footer class="pie-pagina" id="pata">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="">
+                        <img src="./imag/logo.jpeg" alt="logo">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>GAMERSCAVES</h2>
+                <p>TU DESTINO, TU JUEGO</p>
+                <p>venta de videojuegos</p>
+            </div>
+            <div class="box">
+                <h2>SIGUEME</h2>
+                <div class="red-social">
+                    <a href="https://www.facebook.com/YOUR_FACEBOOK_PROFILE" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://www.instagram.com/YOUR_INSTAGRAM_PROFILE" class="fa fa-instagram"></a>
+                    <a href="https://twitter.com/YOUR_TWITTER_PROFILE" class="fa fa-twitter"></a>
+                    <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" class="fa fa-whatsapp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy;2023 <b>GAMERSCAVES</b>_todos los derechos reservados </small>
+        </div>
+    </footer>
+</body>
+</html>
